@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style type="text/css">
+    	h1{margin: 100px 368px;color: white;}
+
+    	body{background: lightblue url(../images/bg2.jpg) no-repeat;background-size: 100%;}
+    	.box{width: 400px;height: 300px;margin: auto; border: 1px solid;}
+    	input{width: 70px;height: 35px;}
+    </style>
+  </head>
+  <body>
+  	<div class="header"></div>
+    <h1>详情页面</h1>
+	<div class="box">
+      <h2><%- res[0].title %></h2>
+      <div><%- res.content %></div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style type="text/css">
+    	h1{margin: 100px 368px;color: white;}
+
+    	body{background: lightblue url(../images/bg2.jpg) no-repeat;background-size: 100%;}
+    	.box{width:732px;height: 300px;margin: auto;opacity: 0.7}
+    	input{width: 687px;height: 35px;}
+      .sub{width: 50px; height: 35px;}
+    </style>
+  </head>
+  <body>
+  	<div class="header"></div>
+	<form class="box" method="post" action="/comment/save">
+		标题 : <input type="text" name="title" placeholder="请输入标题"><br />
+		内容 ：<textarea name="content" id="" cols="100" rows="20" placeholder="请输入内容"></textarea>
+            <input type="submit" name="send" value="发表" class="sub">
+	</form>
+  </body>
+</html>

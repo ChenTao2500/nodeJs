@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style type="text/css">
+    	h1{margin: 100px 418px;color:purple;}
+
+    	body{background: lightblue url(../images/login.jpg) no-repeat;background-size: 100%;}
+    	.box{width: 400px;height: 300px;margin: auto;}
+    	input{width: 350px;height: 35px;margin-top: 20px; opacity: 0.6}
+    </style>
+  </head>
+  <body>
+  	<div class="header"></div>
+    <h1> <%= title1 %></h1>
+	<form class="box" action="/users/loginsave" method="post">
+		<input type="text" name="loginname" id="loginname" placeholder="请输入账号"><br />
+    <input type="text" name="loginpsw" id="loginpsw" placeholder="请输入密码">
+		<input type="submit" name="login" id="login" value="登陆">
+	</form>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style type="text/css">
+    	h1{margin: 100px 368px;color: white;}
+      a{text-decoration: none;color: black;}
+    	body{background: lightblue url(../images/bg1.jpg) no-repeat;background-size: 100%; opacity: 0.6}
+    	.box{width: 857px;margin: auto; border: 1px solid; float: left;}
+      .tit{height: 35px; width: 857px; line-height: 35px;border-bottom: 1px solid;}
+      .tit > span{display:block; float:left;width: 214px;border-right: 1px solid;}
+      .cont >div{width: 857px; height: 35px; line-height: 35px;}
+      .cont >div>span{display:block; float:left;width: 213px;border-bottom: 1px solid;}
+    	input{width: 70px;height: 35px;}
+    </style>
+  </head>
+  <body>
+
+  <div class="box">
+   <div class="tit"> <span>序号</span> <span>标题</span> <span>内容</span> <span>操作</span></div>
+   <div class="cont">
+     <% res.forEach(function(item, index){ %>
+            <div>
+                <span><%- index %></span>
+                <span><a href="./detail?uid=<%- item.uid %>"><%- item.title %></a></span>
+                <span><%- item.content %></span>
+                <span><a onclick="location.href='/comment/deletes?uid=<%- item.uid %>'">删除</a></span>
+            </div>
+      <% }) %>
+   </div>
+  </div>
+
+
+  </body>
+</html>
